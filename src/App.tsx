@@ -5,8 +5,11 @@ import { products } from './data/products';
 export const App = () => {
   return (
     <div className="container mx-auto max-w-2xl pt-5">
-      <Product product={products[0]} />
-      <Product product={products[1]} />
+      {products.map((product) => (
+        <Product product={product} key={product.id} />
+      ))}
+      {/* <Product product={products[0]} />
+      <Product product={products[1]} /> */}
     </div>
   );
 };
